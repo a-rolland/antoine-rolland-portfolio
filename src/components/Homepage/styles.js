@@ -5,9 +5,9 @@ const slideup = keyframes`
   100% {opacity: 1; top: 50%;}
 `
 
-const slideup2 = keyframes`
-  0%   {opacity: 0; top: 70%;}
-  100% {opacity: 1; top: 60%;}
+const slideup2 = (top0, top100) =>keyframes`
+  0%   {opacity: 0; top: ${top0};}
+  100% {opacity: 1; top: ${top100};}
 `
 
 export const StyledHomepage = styled.div`
@@ -39,6 +39,14 @@ export const Title = styled.h1`
   transform: translate(-50%,-50%);
   color: white;
   animation: ${slideup} 4s;
+
+  @media (max-width: 600px) {
+    line-height: 70px;
+  }
+
+  @media (min-width: 600px) {
+    width: 100%;
+  }
 `
 
 export const SubTitle = styled.h2`
@@ -50,13 +58,22 @@ export const SubTitle = styled.h2`
   /* font-family: 'Amatic SC', cursive; */
   font-family: 'Baloo Tamma 2', cursive;
   /* font-family: 'Staatliches', cursive; */
-
   font-weight: 400;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute; 
   top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  animation: ${slideup2} 4s;
+  animation: ${slideup2("70%", "60%")} 4s;  
+
+  @media (max-width: 600px) {
+    line-height: 40px;
+    top: 70%;
+    animation: ${slideup2("80%", "70%")} 4s;
+  }
+
+  @media (min-width: 600px) {
+    width: 100%;
+  }
 `
