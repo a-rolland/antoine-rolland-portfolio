@@ -15,7 +15,7 @@ const Navbar = () => {
           </StyledSpan>
         </Link>
         <StyledSpan>
-          _
+          |
         </StyledSpan>
         <Link to="/works">
           <StyledSpan>
