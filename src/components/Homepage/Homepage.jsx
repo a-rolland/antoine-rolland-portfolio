@@ -1,5 +1,5 @@
 import { StyledHomepage, Title, SubTitle, Image } from './styles'
-const publicPath = process.env.PUBLIC_URL
+// const publicPath = process.env.PUBLIC_URL
 
 const Homepage = () => {
   return (

@@ -1,10 +1,13 @@
-import {  } from './styles'
+import { StyledAbout, Title } from './styles'
 
 const About = () => {
+
   return (
-    <div>
-      About me
-    </div>
+    <StyledAbout>
+      <Title>
+        ABOUT ME
+      </Title>
+    </StyledAbout>
   );
 }
 

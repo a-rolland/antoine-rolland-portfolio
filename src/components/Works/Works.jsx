@@ -1,6 +1,8 @@
 import Gallery from '../Gallery/Gallery'
-import { StyledWorks, Title, Logo, ProjectTitle, Paragraph, StyledProject } from './styles'
+import { StyledWorks, Title, Logo, Paragraph, StyledProject } from './styles'
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 const publicPath = process.env.PUBLIC_URL
 
 const Works = () => {
@@ -43,8 +45,8 @@ const Works = () => {
       pictures: [{url: publicPath + "/projects/supertrips/pictures/1.png"},
       {url: publicPath + "/projects/supertrips/pictures/2.png"},
       {url: publicPath + "/projects/supertrips/pictures/3.png"},
-      {url: publicPath + "/projects/supertrips/pictures/4.png"},
-      {url: publicPath + "/projects/supertrips/pictures/5.png"},
+      // {url: publicPath + "/projects/supertrips/pictures/4.png"},
+      // {url: publicPath + "/projects/supertrips/pictures/5.png"},
       {url: publicPath + "/projects/supertrips/pictures/6.png"}]
     },
   ]
@@ -54,14 +56,18 @@ const Works = () => {
       <StyledProject key={project.title}>
         <a target="_blank" href={project.link} rel='noreferrer'>
           <Logo src={project.logo} />
+          <span>
+            <FontAwesomeIcon
+              icon={ faExternalLinkAlt }
+              // size="lg"
+              color="grey"
+            />
+          </span>
         </a>
-        <div width="400px">
-        <Gallery pictures={project.pictures} />
-        </div>
-        
         <Paragraph>
           {project.description}
         </Paragraph>
+        <Gallery pictures={project.pictures} />
       </StyledProject>
     )
   })
@@ -69,7 +75,7 @@ const Works = () => {
   return (
     <StyledWorks>
       <Title>
-        My Projects
+        PROJECTS
       </Title>
       {listProjects}
     </StyledWorks>

@@ -10,6 +10,13 @@ export const StyledWorks = styled.div`
   color: white;
   height: auto;
   background-color: #181818;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 `
 
 export const StyledProject = styled.li`
@@ -20,20 +27,60 @@ export const StyledProject = styled.li`
   align-items: center;
   text-align: center;
   width: 350px;
-  margin: 50px 0;
+  margin: 70px 0;
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    width: 500px;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: 650px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 800px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1000px;
+  }
 `
 
 export const Title = styled.h1`
   font-family: 'Baloo Tamma 2', cursive;
-  font-size: 46px;
+  font-weight: 400;
+  font-size: 36px;
 `
 
 export const Logo = styled.img`
   width: 200px;
-  margin-bottom: 30px;
+  margin-right: 20px;
+
+  @media (min-width: 600px) and (max-width: 992px) {
+    width: 300px;
+  }
+
+  @media (min-width: 992px) {
+    width: 400px;
+  }
 `
 
 export const Paragraph = styled.p`
   font-family: 'Baloo Tamma 2', cursive;
+  text-align: justify;
+  font-size: 16px;
+  margin: 30px;
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 22px;
+  }
 `
 
