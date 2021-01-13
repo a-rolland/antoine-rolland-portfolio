@@ -95,10 +95,17 @@ export const DropdownIcon = styled.span`
   }
 
   @media (min-width: 767px) {
-      display: none;
-    }
+    display: none;
+  }
 `
 
+export const Flag = styled.img`
+  width: 25px; 
+
+  @media (min-width: 769px) {
+    margin-left: 10px;
+  }
+`
 
 
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-import { StyledNavbar, Logo, DropdownIcon, Dropdown, StyledSpan } from './styles'
+import { StyledNavbar, Logo, DropdownIcon, Dropdown, StyledSpan, Flag } from './styles'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 const publicPath = process.env.PUBLIC_URL
 
-const Navbar = () => {
+const Navbar = props => {
 
   const [showDropdown, setShowDropdown] = useState(false)
   const [dropDownButtonColor, setDropdownButtonColor] = useState("white")
@@ -42,6 +42,10 @@ const Navbar = () => {
       : setDropdownButtonColor("white");
   };
 
+  const switchLanguage = () => {
+    props.handleToggleLanguage()
+  }
+
   return (
     <StyledNavbar>
       <Link to="/" onClick={closeDropdown}>
@@ -61,7 +65,7 @@ const Navbar = () => {
         <li>
           <Link to="/about" onClick={closeDropdown}>
             <StyledSpan>
-              ABOUT
+              { props.lang === "english" ? "ABOUT" : "SOBRE MI"}
             </StyledSpan>
         </Link>
         </li>
@@ -76,9 +80,24 @@ const Navbar = () => {
         <li>
           <Link to="/works" onClick={closeDropdown}>
             <StyledSpan>
-              PROJECTS
+            { props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
             </StyledSpan>
           </Link>
+        </li>
+        {
+          showDropdown || 
+          <li>
+          <StyledSpan>
+            |
+          </StyledSpan>
+        </li>
+        }
+        <li style={{"color": "white"}}>
+          {
+            props.lang === "english"
+              ? <Flag src={publicPath + "/esFlag.png"} onClick={switchLanguage} />
+              : <Flag src={publicPath + "/enFlag.png"} onClick={switchLanguage} />
+          }
         </li>
       </Dropdown>
     </StyledNavbar>

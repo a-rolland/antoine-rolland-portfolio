@@ -22,15 +22,7 @@ export const Image = styled.div`
 `
 
 export const Title = styled.h1`
-  /* font-family: 'Delius', cursive; */
-  /* font-family: 'Patrick Hand SC', cursive; */
-  /* font-family: 'Coming Soon', cursive; */
-  /* font-family: 'Rancho', cursive; */
-  /* font-family: 'Pacifico', cursive; */
-  /* font-family: 'Amatic SC', cursive; */
   font-family: 'Baloo Tamma 2', cursive;
-  /* font-family: 'Staatliches', cursive; */
-
   font-weight: 400;
   font-size: 64px;
   position: absolute; 
@@ -50,22 +42,15 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
-  /* font-family: 'Delius', cursive; */
-  /* font-family: 'Patrick Hand SC', cursive; */
-  /* font-family: 'Coming Soon', cursive; */
-  /* font-family: 'Rancho', cursive; */
-  /* font-family: 'Pacifico', cursive; */
-  /* font-family: 'Amatic SC', cursive; */
   font-family: 'Baloo Tamma 2', cursive;
-  /* font-family: 'Staatliches', cursive; */
   font-weight: 400;
   font-size: 40px;
   position: absolute; 
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  animation: ${slideup2("70%", "60%")} 4s;  
+  animation: ${slideup2("75%", "65%")} 4s;  
 
   @media (max-width: 600px) {
     line-height: 40px;
@@ -77,3 +62,12 @@ export const SubTitle = styled.h2`
     width: 100%;
   }
 `
+
+// FONTS
+  /* font-family: 'Delius', cursive; */
+  /* font-family: 'Patrick Hand SC', cursive; */
+  /* font-family: 'Coming Soon', cursive; */
+  /* font-family: 'Rancho', cursive; */
+  /* font-family: 'Pacifico', cursive; */
+  /* font-family: 'Amatic SC', cursive; */
+  /* font-family: 'Staatliches', cursive; */

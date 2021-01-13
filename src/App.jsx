@@ -4,15 +4,25 @@ import Homepage from "./components/Homepage/Homepage.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Works from "./components/Works/Works";
 import About from "./components/About/About";
+import { useState } from "react";
 
 const App = () => {
+
+  const [language, setLanguage] = useState("english")
+
+  const toggleLanguage = () => {
+    language === "english"
+      ? setLanguage("spanish")
+      : setLanguage("english");
+  };
+
   return (
     <StyledApp>
-      <Navbar />
+      <Navbar lang={language} handleToggleLanguage={toggleLanguage} />
       <Switch>
-        <Route exact path="/" render={() => <Homepage />} />
-        <Route exact path="/about" render={() => <About />} />
-        <Route exact path="/works" render={() => <Works />} />
+        <Route exact path="/" render={() => <Homepage lang={language} />} />
+        <Route exact path="/about" render={() => <About lang={language} />} />
+        <Route exact path="/works" render={() => <Works lang={language} />} />
       </Switch>
     </StyledApp>
   );

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 const publicPath = process.env.PUBLIC_URL
 
-const Works = () => {
+const Works = props => {
   const projects = [
     {
       title: "HackUno",
@@ -75,7 +75,7 @@ const Works = () => {
   return (
     <StyledWorks>
       <Title>
-        PROJECTS
+        { props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
       </Title>
       {listProjects}
     </StyledWorks>
