@@ -79,7 +79,7 @@ export const Dropdown = styled.ul`
 `
 
 export const StyledSpan = styled.span`
-  animation: ${slowlyAppears} 4s;
+  animation: ${slowlyAppears} 2s;
   font-family: 'Baloo Tamma 2', cursive;
   font-size: 30px;
   color: white;

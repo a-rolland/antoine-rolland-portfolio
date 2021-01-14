@@ -71,6 +71,11 @@ export const Paragraph = styled.p`
   font-size: 16px;
   margin: 30px;
 
+  &.stack {
+    margin-top: 0;
+    margin-right: auto;
+  }
+
   @media (min-width: 600px) and (max-width: 768px) {
     font-size: 18px;
   }

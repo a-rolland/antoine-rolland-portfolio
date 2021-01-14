@@ -37,8 +37,8 @@ const About = props => {
               </p>
             :
               <p>
-                  Soy Antoine, un <em>Desarrollador Web Full Stack</em> francés, con un background en Sistemas de Información Geográfica (SIG). 
-                  He tenido mi primera experiencia como Desarrollador Web en 2016 desde entonces nunca he podido olvidar 
+                  Soy Antoine, un <em>Desarrollador Web Full Stack</em> Junior francés, con un background en Sistemas de Información Geográfica (SIG). 
+                  He tenido mi primera experiencia como Desarrollador Web en 2016 y desde entonces nunca he podido olvidar 
                   el encanto y la satisfacción de desarrollar y de compartir código con la comunidad.
               </p>
         }
@@ -171,19 +171,34 @@ const About = props => {
             <h4>2020</h4>
             <ul>
               <li>
-                Technologies: Javascript ES6, Node.js, Express.js, React.js (+ Hooks & Redux basics), MongoDB, Mongoose, HTML5 and CSS3.
+                { props.lang === "english"
+                  ? "Technologies: Javascript ES6, Node.js, Express.js, React.js (+ Hooks & Redux basics), MongoDB, Mongoose, HTML5 and CSS3."
+                  : "Tecnologías: Javascript ES6, Node.js, Express.js, React.js (+ Hooks & Redux básico), MongoDB, Mongoose, HTML5 y CSS3."
+                }
               </li>
               <li>
-                Learned how to build web apps from scratch.
+                { props.lang === "english"
+                  ? "Learned how to build web apps from scratch."
+                  : "Desarrollo de aplicaciones web desde cero."
+                }
               </li>
               <li>
-                Adopted Agile methodology concepts.
+                { props.lang === "english"
+                  ? "Adopted Agile methodology concepts."
+                  : "Adopción de la metodología Agile."
+                }
               </li>
               <li>
-                Experienced remote learning and working experience due to Covid-19.
+                { props.lang === "english"
+                  ? "Experienced remote learning and working experience due to Covid-19."
+                  : "Experiencía de trabajo y de proyectos de forma remota, solo, en parejas o en grupo debido al Covid-19."
+                }
               </li>
               <li>
-                Learned best coding practices.
+                { props.lang === "english"
+                  ? "Learned best coding practices."
+                  : "Profundización y perfeccionamiento de conocimientos en programación."
+                }
               </li>
             </ul>
           </ExperienceDescription>
@@ -206,19 +221,34 @@ const About = props => {
             <h4>2017 - 2020</h4>
             <ul>
               <li>
-                Welcomed and checked passengers from Iberia and Vueling Airlines, and companies handled by Iberia : Emirates, Aer Lingus, Level, etc.
+                { props.lang === "english"
+                  ? "Welcomed and checked passengers from Iberia and Vueling Airlines, and companies handled by Iberia : Emirates, Aer Lingus, Level, etc."
+                  : "Atención a los pasajeros de Iberia y Vueling Airlines, y de aerolíneas clientes de Iberia : Emirates, Aer Lingus, Level, etc."
+                }
               </li>
               <li>
-                Checked and accepted passengers luggages at check-in counters and boarding gates.
+                { props.lang === "english"
+                  ? "Checked and accepted passengers luggages at check-in counters and boarding gates."
+                  : "Facturación de los pasajeros y equipajes así como del embarque y cierre de vuelo."
+                }
               </li>
               <li>
-                Checked travel documents according to companies policies and immigration laws.
+                { props.lang === "english"
+                  ? "Checked travel documents according to companies policies and immigration laws."
+                  : "Verificación de la documentación de acuerdo a los países de destino."
+                }
               </li>
               <li>
-                Maintained thorough knowledge of policies and procedures pertaining to unaccompanied minors, law enforcement officers, dangerous goods and other regulatory requirements.
+                { props.lang === "english"
+                  ? "Maintained thorough knowledge of policies and procedures pertaining to unaccompanied minors, law enforcement officers, dangerous goods and other regulatory requirements."
+                  : " Asistencia a los pasajeros en caso de cancelaciones o retrasos de vuelos."
+                }
               </li>
               <li>
-                Assisted unaccompanied minors and passengers with special needs.
+                { props.lang === "english"
+                  ? "Assisted unaccompanied minors and passengers with special needs."
+                  : "Asistencia a los menores no acompañados (UM) y a pasajeros con necesidades especiales"
+                }
               </li>
             </ul>
           </ExperienceDescription>
@@ -241,22 +271,40 @@ const About = props => {
             <h4>2016</h4>
             <ul>
               <li>
-                Technologies: Python, Django, Javascript, Git, GitHub, QGIS, HTML5 and CSS3. 
+                { props.lang === "english"
+                  ? "Technologies: Python, Django, Javascript, Git, GitHub, QGIS, HTML5 and CSS3."
+                  : "Tecnologías: Python, Django, Javascript, Git, GitHub, QGIS, HTML5 y CSS3."
+                } 
               </li>
               <li>
-                Contributed to GeoNode development (via GitHub).
+                { props.lang === "english"
+                  ? "Contributed to GeoNode development (via GitHub)."
+                  : "Contribución al desarrollo de GeoNode via GitHub."
+                }
               </li>
               <li>
-                Improved the AWARE web atlas (https://aware.cirad.fr), deployed with GeoNode.
+                { props.lang === "english"
+                  ? "Improved the AWARE web atlas (https://aware.cirad.fr), deployed with GeoNode."
+                  : "Evolución del atlas cartográfico web AWARE (https://aware.cirad.fr) basado en GeoNode."
+                }
               </li>
               <li>
-                Migrated to GeoNode 2.4 version.
+                { props.lang === "english"
+                  ? "Migrated to GeoNode 2.4 version."
+                  : "Migración hacia GeoNode 2.4."
+                }
               </li>
               <li>
-                Improved the authorizations and permissions system.
+                { props.lang === "english"
+                  ? "Improved the authorizations and permissions system."
+                  : "Mejoras en la concesión de permisos."
+                }
               </li>
               <li>
-                Translated a part of the website.
+                { props.lang === "english"
+                  ? "Translated a part of the website."
+                  : "Traducción del sitio web."
+                }
               </li>
             </ul>
           </ExperienceDescription>
@@ -279,16 +327,28 @@ const About = props => {
             <h4>2015</h4>
             <ul>
               <li>
-                Technologies: QGIS, PostgreSQL, PostGIS.
+                { props.lang === "english"
+                  ? "Technologies: QGIS, PostgreSQL y PostGIS."
+                  : "Tecnologías: QGIS, PostgreSQL y PostGIS."
+                }
               </li>
               <li>
-                Digitized the waste collection rounds maps.
+                { props.lang === "english"
+                  ? "Digitized the waste collection rounds maps."
+                  : "Digitalización de los planes de recogida."
+                }
               </li>
               <li>
-                Analysed the dangerous spots of these collection rounds.
+                { props.lang === "english"
+                  ? "Analysed the dangerous spots of these collection rounds."
+                  : "Análisis de las zonas peligrosas de estas recogidas."
+                }
               </li>
               <li>
-                Updated and managed the database used for this task.
+                { props.lang === "english"
+                  ? "Updated and managed the database used for this task."
+                  : "Gestión de la base de datos relativa a esta misión."
+                }
               </li>
             </ul>
           </ExperienceDescription>

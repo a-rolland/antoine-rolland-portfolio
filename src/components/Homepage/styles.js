@@ -30,7 +30,7 @@ export const Title = styled.h1`
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  animation: ${slideup} 4s;
+  animation: ${slideup} 2s;
 
   @media (max-width: 600px) {
     line-height: 70px;
@@ -50,12 +50,12 @@ export const SubTitle = styled.h2`
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  animation: ${slideup2("75%", "65%")} 4s;  
+  animation: ${slideup2("75%", "65%")} 2s;  
 
   @media (max-width: 600px) {
     line-height: 40px;
     top: 70%;
-    animation: ${slideup2("80%", "70%")} 4s;
+    animation: ${slideup2("80%", "70%")} 2s;
   }
 
   @media (min-width: 600px) {
