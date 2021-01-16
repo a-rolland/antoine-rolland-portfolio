@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledAbout = styled.div`
   position: relative;
@@ -10,34 +10,34 @@ export const StyledAbout = styled.div`
   color: white;
   height: auto;
   background-color: #181818;
-`
+`;
 
 export const Title = styled.h1`
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-weight: 400;
   font-size: 36px;
-`
+`;
 
 export const SubTitle = styled.h2`
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-weight: 400;
   font-size: 24px;
   font-style: italic;
   margin: 0;
-`
+`;
 
 export const Picture = styled.img`
   height: 200px;
   width: 200px;
   border-radius: 50%;
-`
+`;
 
 export const Description = styled.div`
   min-width: 250px;
   max-width: 700px;
 
   p {
-    font-family: 'Baloo Tamma 2', cursive;
+    font-family: "Baloo Tamma 2", cursive;
     text-align: justify;
     font-size: 16px;
     margin: 30px;
@@ -58,7 +58,7 @@ export const Description = styled.div`
       font-size: 22px;
     }
   }
-`
+`;
 
 export const StyledSkills = styled.div`
   display: flex;
@@ -68,7 +68,7 @@ export const StyledSkills = styled.div`
   justify-content: center;
   max-width: 700px;
   margin-bottom: 50px;
-`
+`;
 
 export const Skill = styled.span`
   display: flex;
@@ -87,12 +87,12 @@ export const Skill = styled.span`
       width: 100px;
     }
   }
-`
+`;
 
 export const StyledExperiences = styled.div`
   max-width: 800px;
   margin: 0 20px;
-`
+`;
 
 export const Experience = styled.div`
   display: flex;
@@ -101,11 +101,11 @@ export const Experience = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin: 40px 0;
-  
+
   @media (max-width: 600px) {
     flex-direction: column;
   }
-`
+`;
 
 export const StructureLogo = styled.div`
   width: 125px;
@@ -114,19 +114,21 @@ export const StructureLogo = styled.div`
   align-items: center;
 
   img {
-    width: 125px;;
+    width: 125px;
   }
 
   @media (max-width: 600px) {
     margin-bottom: 30px;
   }
-`
+`;
 
 export const ExperienceDescription = styled.div`
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   margin-left: 50px;
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     margin: 0;
   }
 
@@ -188,4 +190,4 @@ export const ExperienceDescription = styled.div`
       text-align: left;
     }
   }
-`
+`;

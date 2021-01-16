@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import { StyledApp } from './styles';
+import { StyledApp } from "./styles";
 import Homepage from "./components/Homepage/Homepage.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Works from "./components/Works/Works";
@@ -7,13 +7,10 @@ import About from "./components/About/About";
 import { useState } from "react";
 
 const App = () => {
-
-  const [language, setLanguage] = useState("english")
+  const [language, setLanguage] = useState("english");
 
   const toggleLanguage = () => {
-    language === "english"
-      ? setLanguage("spanish")
-      : setLanguage("english");
+    language === "english" ? setLanguage("spanish") : setLanguage("english");
   };
 
   return (
@@ -26,6 +23,6 @@ const App = () => {
       </Switch>
     </StyledApp>
   );
-}
+};
 
 export default App;

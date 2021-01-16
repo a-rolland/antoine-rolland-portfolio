@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledApp = styled.div`
   font-family: Arial, Helvetica, sans-serif;
@@ -7,4 +7,4 @@ export const StyledApp = styled.div`
   background-size: cover;
   width: 100vw;
   height: 100vh;
-`
+`;

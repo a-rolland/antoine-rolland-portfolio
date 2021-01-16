@@ -1,19 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
-import { StyledNavbar, Logo, DropdownIcon, Dropdown, StyledSpan, Flag, SocialMediaLink } from './styles'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  StyledNavbar,
+  Logo,
+  DropdownIcon,
+  Dropdown,
+  StyledSpan,
+  Flag,
+  SocialMediaLink,
+} from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-const publicPath = process.env.PUBLIC_URL
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+const publicPath = process.env.PUBLIC_URL;
 
-const Navbar = props => {
-
-  const [showDropdown, setShowDropdown] = useState(false)
-  const [dropDownButtonColor, setDropdownButtonColor] = useState("white")
+const Navbar = (props) => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [dropDownButtonColor, setDropdownButtonColor] = useState("white");
   const [size, setSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
-  })
+  });
 
   useEffect(() => {
     const getSize = () => {
@@ -42,17 +49,17 @@ const Navbar = props => {
   };
 
   const switchLanguage = () => {
-    props.handleToggleLanguage()
-  }
+    props.handleToggleLanguage();
+  };
 
   return (
     <StyledNavbar>
       <Link to="/" onClick={closeDropdown}>
-          <Logo src={publicPath + "/logo__white.png"} />
+        <Logo src={publicPath + "/logo__white.png"} />
       </Link>
       <DropdownIcon>
         <FontAwesomeIcon
-          icon={showDropdown ? faTimes : faBars }
+          icon={showDropdown ? faTimes : faBars}
           size="lg"
           color={dropDownButtonColor}
           onMouseEnter={toggleDropdownButtonColor}
@@ -64,75 +71,65 @@ const Navbar = props => {
         <li>
           <Link to="/about" onClick={closeDropdown}>
             <StyledSpan>
-              { props.lang === "english" ? "ABOUT" : "SOBRE MI"}
-            </StyledSpan>
-        </Link>
-        </li>
-        {
-          showDropdown || 
-          <li>
-          <StyledSpan className="separator">
-            |
-          </StyledSpan>
-        </li>
-        }
-        <li>
-          <Link to="/works" onClick={closeDropdown}>
-            <StyledSpan>
-            { props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
+              {props.lang === "english" ? "ABOUT" : "SOBRE MI"}
             </StyledSpan>
           </Link>
         </li>
-        {
-          showDropdown || 
+        {showDropdown || (
           <li>
-          <StyledSpan className="separator">
-            |
-          </StyledSpan>
-        </li>
-        }
+            <StyledSpan className="separator">|</StyledSpan>
+          </li>
+        )}
         <li>
-          <SocialMediaLink target="_blank" href="https://github.com/a-rolland" rel='noreferrer'>
-            <FontAwesomeIcon
-              icon={ faGithub }
-              color="white"
-            />
+          <Link to="/works" onClick={closeDropdown}>
+            <StyledSpan>
+              {props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
+            </StyledSpan>
+          </Link>
+        </li>
+        {showDropdown || (
+          <li>
+            <StyledSpan className="separator">|</StyledSpan>
+          </li>
+        )}
+        <li>
+          <SocialMediaLink
+            target="_blank"
+            href="https://github.com/a-rolland"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} color="white" />
           </SocialMediaLink>
         </li>
-        {
-          showDropdown || 
+        {showDropdown || (
           <li>
-          <StyledSpan className="separator">
-            |
-          </StyledSpan>
-        </li>
-        }
+            <StyledSpan className="separator">|</StyledSpan>
+          </li>
+        )}
         <li>
-          <SocialMediaLink target="_blank" href="https://www.linkedin.com/in/-antoine-rolland/" rel='noreferrer'>
-              <FontAwesomeIcon
-                icon={ faLinkedinIn }
-                color="white"
-              />
-            </SocialMediaLink>
+          <SocialMediaLink
+            target="_blank"
+            href="https://www.linkedin.com/in/-antoine-rolland/"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} color="white" />
+          </SocialMediaLink>
         </li>
-        {
-          showDropdown || 
+        {showDropdown || (
           <li>
-          <StyledSpan className="separator">
-            ·
-          </StyledSpan>
-        </li>
-        }
-        <li style={{"color": "white"}}>
-          {
-            props.lang === "english"
-              ? <Flag src={publicPath + "/esFlag.png"} onClick={switchLanguage} />
-              : <Flag src={publicPath + "/enFlag.png"} onClick={switchLanguage} />
-          }
+            <StyledSpan className="separator">·</StyledSpan>
+          </li>
+        )}
+        <li style={{ color: "white" }}>
+          {props.lang === "english" ? (
+            <Flag src={publicPath + "/esFlag.png"} onClick={switchLanguage} />
+          ) : (
+            <Flag src={publicPath + "/enFlag.png"} onClick={switchLanguage} />
+          )}
         </li>
       </Dropdown>
     </StyledNavbar>
   );
-}
+};
 
 export default Navbar;

@@ -1,14 +1,14 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
 const slowlyAppears = keyframes`
   0%   {opacity: 0;}
   100% {opacity: 1;}
-`
+`;
 
 const menuTransition = keyframes`
   from  {opacity: 0;}
   to    {opacity: 1;}
-`
+`;
 
 export const StyledNavbar = styled.div`
   position: fixed;
@@ -27,14 +27,13 @@ export const StyledNavbar = styled.div`
   @media (max-width: 768px) {
     justify-content: space-between;
   }
-`
+`;
 
 export const Logo = styled.img`
   width: 100px;
-`
+`;
 
 export const Dropdown = styled.ul`
-
   @media (max-width: 767px) {
     display: ${(props) => props.showDropdown};
     flex-direction: column;
@@ -46,11 +45,11 @@ export const Dropdown = styled.ul`
     position: absolute;
     z-index: 6;
     height: fit-content;
-    background-color: rgba(30, 30, 30, .6);
+    background-color: rgba(30, 30, 30, 0.6);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
     padding: 20px 0;
 
-    animation: ${menuTransition} .3s;
+    animation: ${menuTransition} 0.3s;
     font-size: 12px;
 
     li {
@@ -75,11 +74,11 @@ export const Dropdown = styled.ul`
     padding: 0;
     width: 100%;
   }
-`
+`;
 
 export const StyledSpan = styled.span`
   animation: ${slowlyAppears} 2s;
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-size: 30px;
   color: white;
   font-weight: 500;
@@ -88,11 +87,11 @@ export const StyledSpan = styled.span`
   &.separator {
     font-size: 10px;
   }
-`
+`;
 
 export const DropdownIcon = styled.span`
   margin-right: 60px;
-  
+
   &:hover {
     cursor: pointer;
   }
@@ -100,7 +99,7 @@ export const DropdownIcon = styled.span`
   @media (min-width: 767px) {
     display: none;
   }
-`
+`;
 
 export const Flag = styled.img`
   width: 25px;
@@ -109,9 +108,9 @@ export const Flag = styled.img`
   margin: 10px 0;
 
   @media (min-width: 769px) {
-    margin: 4px 0 0 10px;;
+    margin: 4px 0 0 10px;
   }
-`
+`;
 
 export const SocialMediaLink = styled.a`
   animation: ${slowlyAppears} 2s;
@@ -122,5 +121,4 @@ export const SocialMediaLink = styled.a`
   @media (min-width: 769px) {
     margin: 0 10px 10px 10px;
   }
-`
-
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledWorks = styled.div`
   position: relative;
@@ -17,7 +17,7 @@ export const StyledWorks = styled.div`
     align-items: center;
     margin-bottom: 10px;
   }
-`
+`;
 
 export const StyledProject = styled.li`
   list-style: none;
@@ -44,13 +44,13 @@ export const StyledProject = styled.li`
   @media (min-width: 1200px) {
     width: 1000px;
   }
-`
+`;
 
 export const Title = styled.h1`
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-weight: 400;
   font-size: 36px;
-`
+`;
 
 export const Logo = styled.img`
   width: 200px;
@@ -63,10 +63,10 @@ export const Logo = styled.img`
   @media (min-width: 992px) {
     width: 400px;
   }
-`
+`;
 
 export const Paragraph = styled.p`
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   text-align: justify;
   font-size: 16px;
   margin: 30px;
@@ -87,5 +87,4 @@ export const Paragraph = styled.p`
   @media (min-width: 992px) {
     font-size: 22px;
   }
-`
-
+`;
