@@ -42,6 +42,10 @@ export const Description = styled.div`
     font-size: 16px;
     margin: 30px;
 
+    &.picLegend {
+      text-align: center;
+    }
+
     @media (min-width: 601px) and (max-width: 768px) {
       font-size: 18px;
     }

@@ -50,7 +50,12 @@ export const SubTitle = styled.h2`
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
-  animation: ${slideup2("75%", "65%")} 2s;  
+  animation: ${slideup2("75%", "65%")} 2s;
+
+  span {
+    animation: ${slideup2("75%", "65%")} 15s;
+    color: #ff7600;
+  }
 
   @media (max-width: 600px) {
     line-height: 40px;
@@ -62,12 +67,3 @@ export const SubTitle = styled.h2`
     width: 100%;
   }
 `
-
-// FONTS
-  /* font-family: 'Delius', cursive; */
-  /* font-family: 'Patrick Hand SC', cursive; */
-  /* font-family: 'Coming Soon', cursive; */
-  /* font-family: 'Rancho', cursive; */
-  /* font-family: 'Pacifico', cursive; */
-  /* font-family: 'Amatic SC', cursive; */
-  /* font-family: 'Staatliches', cursive; */

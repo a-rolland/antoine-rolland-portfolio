@@ -15,7 +15,6 @@ const Navbar = props => {
   })
 
   useEffect(() => {
-    // On each screen size change, check if the dropdown menu should be closed
     const getSize = () => {
       return {
         width: window.innerWidth,
@@ -25,7 +24,6 @@ const Navbar = props => {
     const handleResize = () => setSize(getSize());
     window.addEventListener("resize", handleResize);
     size.width >= 767 && closeDropdown();
-    // setState({ loggedInUser: props.userInSession });
   }, [size.width]);
 
   const toggleDropdown = () => {

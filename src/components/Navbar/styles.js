@@ -106,21 +106,3 @@ export const Flag = styled.img`
     margin-left: 10px;
   }
 `
-
-
-
-
-
-
-
-
-
-
-  // font-family: 'Delius', cursive;
-  // font-family: 'Patrick Hand SC', cursive;
-  // font-family: 'Coming Soon', cursive; 
-  // font-family: 'Rancho', cursive; 
-  // font-family: 'Pacifico', cursive; 
-  // font-family: 'Amatic SC', cursive; 
-  // font-family: 'Baloo Tamma 2', cursive;
-  // font-family: 'Ubuntu', sans-serif;
