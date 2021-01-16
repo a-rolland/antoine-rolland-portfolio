@@ -50,8 +50,7 @@ export const Dropdown = styled.ul`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
     padding: 20px 0;
 
-    animation-name: ${menuTransition};
-    animation-duration: 0.3s;
+    animation: ${menuTransition} .3s;
     font-size: 12px;
 
     li {
@@ -85,6 +84,10 @@ export const StyledSpan = styled.span`
   color: white;
   font-weight: 500;
   margin: 0 10px;
+
+  &.separator {
+    font-size: 10px;
+  }
 `
 
 export const DropdownIcon = styled.span`
@@ -100,9 +103,24 @@ export const DropdownIcon = styled.span`
 `
 
 export const Flag = styled.img`
-  width: 25px; 
+  width: 25px;
+  animation: ${slowlyAppears} 2s;
+  cursor: pointer;
+  margin: 10px 0;
 
   @media (min-width: 769px) {
-    margin-left: 10px;
+    margin: 4px 0 0 10px;;
   }
 `
+
+export const SocialMediaLink = styled.a`
+  animation: ${slowlyAppears} 2s;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 10px 0;
+
+  @media (min-width: 769px) {
+    margin: 0 10px 10px 10px;
+  }
+`
+

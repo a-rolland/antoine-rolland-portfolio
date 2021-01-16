@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-import { StyledNavbar, Logo, DropdownIcon, Dropdown, StyledSpan, Flag } from './styles'
+import { StyledNavbar, Logo, DropdownIcon, Dropdown, StyledSpan, Flag, SocialMediaLink } from './styles'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 const publicPath = process.env.PUBLIC_URL
 
 const Navbar = props => {
@@ -70,7 +71,7 @@ const Navbar = props => {
         {
           showDropdown || 
           <li>
-          <StyledSpan>
+          <StyledSpan className="separator">
             |
           </StyledSpan>
         </li>
@@ -85,8 +86,40 @@ const Navbar = props => {
         {
           showDropdown || 
           <li>
-          <StyledSpan>
+          <StyledSpan className="separator">
             |
+          </StyledSpan>
+        </li>
+        }
+        <li>
+          <SocialMediaLink target="_blank" href="https://github.com/a-rolland" rel='noreferrer'>
+            <FontAwesomeIcon
+              icon={ faGithub }
+              color="white"
+            />
+          </SocialMediaLink>
+        </li>
+        {
+          showDropdown || 
+          <li>
+          <StyledSpan className="separator">
+            |
+          </StyledSpan>
+        </li>
+        }
+        <li>
+          <SocialMediaLink target="_blank" href="https://www.linkedin.com/in/-antoine-rolland/" rel='noreferrer'>
+              <FontAwesomeIcon
+                icon={ faLinkedinIn }
+                color="white"
+              />
+            </SocialMediaLink>
+        </li>
+        {
+          showDropdown || 
+          <li>
+          <StyledSpan className="separator">
+            ·
           </StyledSpan>
         </li>
         }
