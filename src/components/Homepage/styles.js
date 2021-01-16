@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
-const slideup = keyframes`
-  0%   {opacity: 0; top: 60%;}
-  100% {opacity: 1; top: 50%;}
+const slideup = (top0, top100) => keyframes`
+  0%   {opacity: 0; top: ${top0};}
+  100% {opacity: 1; top: ${top100};}
 `;
 
 const slideup2 = (top0, top100) => keyframes`
@@ -30,10 +30,12 @@ export const Title = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: ${slideup} 2s;
+  animation: ${slideup("60%", "50%")} 2s;
 
   @media (max-width: 600px) {
     line-height: 70px;
+    top: 45%;
+    animation: ${slideup("55%", "45%")} 2s;
   }
 
   @media (min-width: 600px) {
