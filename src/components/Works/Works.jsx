@@ -69,7 +69,7 @@ const Works = (props) => {
             "can comment your trip."
           : 'Supertrips es una app que permite ver viajes realizados por otros usuarios. Un Viaje se divide entre "Etapas", ' +
             'y cada etapa se divide entre "Experiencias". De esta forma un usuario puede organizar su viaje de la forma que más le guste! ' +
-            "Una vez logeado (se puede logear con Facebook), se puede crear un viaje y ponerlo como público o privado. " +
+            "Una vez logueado (se puede loguear con Facebook), se puede crear un viaje y ponerlo como público o privado. " +
             "Cada lugar que ha visitado aparecerá en un mapa, y se podrán añadir fotos y descripciones. El resto de los usuarios " +
             "luego pueden comentar los viajes.",
       stack:
