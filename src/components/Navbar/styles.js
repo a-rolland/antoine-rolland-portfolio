@@ -12,10 +12,10 @@ const menuTransition = keyframes`
 
 export const StyledNavbar = styled.div`
   position: fixed;
-  margin: 20px 20px;
+  padding-bottom: 10px;
   width: 100%;
-  z-index: 1;
-  background-color: none;
+  z-index: 5;
+  background-color: ${(props) => (props.isHomepage ? "none" : "#181818")};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,11 +26,23 @@ export const StyledNavbar = styled.div`
 
   @media (max-width: 768px) {
     justify-content: space-between;
+    padding-bottom: 25px;
   }
 `;
 
 export const Logo = styled.img`
   width: 100px;
+  margin: 0 0 0 20px;
+
+  @media (max-width: 600px) {
+    width: 75px;
+    margin: 20px 0 0 20px;
+  }
+
+  @media (min-width: 600px) and (max-width: 767px) {
+    width: 85px;
+    margin: 20px 0 0 20px;
+  }
 `;
 
 export const Dropdown = styled.ul`
@@ -38,14 +50,14 @@ export const Dropdown = styled.ul`
     display: ${(props) => props.showDropdown};
     flex-direction: column;
     list-style-type: none;
-    top: 65px;
+    top: 83px;
     right: 0px;
     padding-left: 0;
-    width: 300px;
+    width: 100%;
     position: absolute;
-    z-index: 6;
+    z-index: 5;
     height: fit-content;
-    background-color: rgba(30, 30, 30, 0.6);
+    background-color: rgba(30, 30, 30, 0.9);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
     padding: 20px 0;
 
@@ -64,8 +76,13 @@ export const Dropdown = styled.ul`
     }
   }
 
+  @media (max-width: 600px) {
+    top: 78px;
+  }
+
   @media (min-width: 767px) {
     margin-right: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,10 +104,18 @@ export const StyledSpan = styled.span`
   &.separator {
     font-size: 10px;
   }
+
+  &.about {
+    color: ${(props) => props.isAbout && "#ff7600"};
+  }
+
+  &.projects {
+    color: ${(props) => props.isProjects && "#ff7600"};
+  }
 `;
 
 export const DropdownIcon = styled.span`
-  margin-right: 60px;
+  margin: 25px 40px 0 0;
 
   &:hover {
     cursor: pointer;
@@ -107,7 +132,7 @@ export const Flag = styled.img`
   cursor: pointer;
   margin: 10px 0;
 
-  @media (min-width: 769px) {
+  @media (min-width: 767px) {
     margin: 4px 0 0 10px;
   }
 `;
@@ -118,7 +143,17 @@ export const SocialMediaLink = styled.a`
   cursor: pointer;
   margin: 10px 0;
 
-  @media (min-width: 769px) {
+  @media (min-width: 767px) {
     margin: 0 10px 10px 10px;
+    position: absolute;
+    right: 30px;
+
+    &.gitHub {
+      top: 100px;
+    }
+
+    &.linkedIn {
+      top: 155px;
+    }
   }
 `;

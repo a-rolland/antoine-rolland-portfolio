@@ -81,7 +81,7 @@ const Works = (props) => {
         { url: publicPath + "/projects/supertrips/pictures/1.png" },
         { url: publicPath + "/projects/supertrips/pictures/2.png" },
         { url: publicPath + "/projects/supertrips/pictures/3.png" },
-        { url: publicPath + "/projects/supertrips/pictures/5.png" },
+        { url: publicPath + "/projects/supertrips/pictures/4.png" },
       ],
     },
   ];

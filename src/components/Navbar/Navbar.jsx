@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   StyledNavbar,
   Logo,
@@ -21,6 +21,7 @@ const Navbar = (props) => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const location = useLocation();
 
   useEffect(() => {
     const getSize = () => {
@@ -53,7 +54,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <StyledNavbar>
+    <StyledNavbar isHomepage={location.pathname === "/"}>
       <Link to="/" onClick={closeDropdown}>
         <Logo src={publicPath + "/logo__white.png"} />
       </Link>
@@ -70,7 +71,10 @@ const Navbar = (props) => {
       <Dropdown showDropdown={showDropdown ? "flex" : "none"}>
         <li>
           <Link to="/about" onClick={closeDropdown}>
-            <StyledSpan>
+            <StyledSpan
+              className="about"
+              isAbout={location.pathname === "/about"}
+            >
               {props.lang === "english" ? "ABOUT" : "SOBRE MI"}
             </StyledSpan>
           </Link>
@@ -82,14 +86,17 @@ const Navbar = (props) => {
         )}
         <li>
           <Link to="/works" onClick={closeDropdown}>
-            <StyledSpan>
+            <StyledSpan
+              className="projects"
+              isProjects={location.pathname === "/works"}
+            >
               {props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
             </StyledSpan>
           </Link>
         </li>
         {showDropdown || (
           <li>
-            <StyledSpan className="separator">|</StyledSpan>
+            <StyledSpan className="separator">·</StyledSpan>
           </li>
         )}
         <li>
@@ -97,29 +104,21 @@ const Navbar = (props) => {
             target="_blank"
             href="https://github.com/a-rolland"
             rel="noreferrer"
+            className="gitHub"
           >
             <FontAwesomeIcon icon={faGithub} color="white" />
           </SocialMediaLink>
         </li>
-        {showDropdown || (
-          <li>
-            <StyledSpan className="separator">|</StyledSpan>
-          </li>
-        )}
         <li>
           <SocialMediaLink
             target="_blank"
             href="https://www.linkedin.com/in/-antoine-rolland/"
             rel="noreferrer"
+            className="linkedIn"
           >
             <FontAwesomeIcon icon={faLinkedinIn} color="white" />
           </SocialMediaLink>
         </li>
-        {showDropdown || (
-          <li>
-            <StyledSpan className="separator">·</StyledSpan>
-          </li>
-        )}
         <li style={{ color: "white" }}>
           {props.lang === "english" ? (
             <Flag src={publicPath + "/esFlag.png"} onClick={switchLanguage} />
