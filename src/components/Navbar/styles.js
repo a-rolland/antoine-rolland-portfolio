@@ -106,11 +106,11 @@ export const StyledSpan = styled.span`
   }
 
   &.about {
-    color: ${(props) => props.isAbout && "#ff7600"};
+    color: ${(props) => props.isAbout && "#007eff"};
   }
 
   &.projects {
-    color: ${(props) => props.isProjects && "#ff7600"};
+    color: ${(props) => props.isProjects && "#007eff"};
   }
 `;
 
@@ -133,7 +133,7 @@ export const Flag = styled.img`
   margin: 10px 0;
 
   @media (min-width: 767px) {
-    margin: 4px 0 0 10px;
+    margin-left: 33px;
   }
 `;
 
@@ -149,11 +149,11 @@ export const SocialMediaLink = styled.a`
     right: 30px;
 
     &.gitHub {
-      top: 100px;
+      top: 110px;
     }
 
     &.linkedIn {
-      top: 155px;
+      top: 185px;
     }
   }
 `;

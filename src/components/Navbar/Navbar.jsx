@@ -94,11 +94,6 @@ const Navbar = (props) => {
             </StyledSpan>
           </Link>
         </li>
-        {showDropdown || (
-          <li>
-            <StyledSpan className="separator">·</StyledSpan>
-          </li>
-        )}
         <li>
           <SocialMediaLink
             target="_blank"

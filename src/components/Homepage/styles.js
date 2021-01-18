@@ -10,6 +10,11 @@ const slideup2 = (top0, top100) => keyframes`
   100% {opacity: 1; top: ${top100};}
 `;
 
+const whiteToColor = keyframes`
+  0%  {color: white;}
+  100%  {color: #007eff;}
+`;
+
 export const StyledHomepage = styled.div`
   text-align: center;
 `;
@@ -55,8 +60,8 @@ export const SubTitle = styled.h2`
   animation: ${slideup2("75%", "65%")} 2s;
 
   span {
-    animation: ${slideup2("75%", "65%")} 15s;
-    color: #ff7600;
+    animation: ${whiteToColor} 10s;
+    color: #007eff;
   }
 
   @media (max-width: 600px) {
