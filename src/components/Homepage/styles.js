@@ -36,11 +36,11 @@ export const Title = styled.h1`
   font-weight: 400;
   font-size: 64px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: ${slideup("50%", "40%")} 2s;
+  animation: ${slideup("60%", "50%")} 2s;
 
   @media (max-width: 600px) {
     line-height: 70px;
@@ -58,11 +58,11 @@ export const SubTitle = styled.h2`
   font-weight: 400;
   font-size: 40px;
   position: absolute;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: ${slideup2("65%", "55%")} 2s;
+  animation: ${slideup2("75%", "65%")} 2s;
 
   span {
     animation: ${whiteToColor} 10s;
