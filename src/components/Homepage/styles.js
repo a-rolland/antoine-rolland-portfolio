@@ -10,6 +10,11 @@ const slideup2 = (top0, top100) => keyframes`
   100% {opacity: 1; top: ${top100};}
 `;
 
+const slowlyAppears = keyframes`
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+`;
+
 const whiteToColor = keyframes`
   0%  {color: white;}
   100%  {color: #007eff;}
@@ -31,16 +36,16 @@ export const Title = styled.h1`
   font-weight: 400;
   font-size: 64px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: ${slideup("60%", "50%")} 2s;
+  animation: ${slideup("50%", "40%")} 2s;
 
   @media (max-width: 600px) {
     line-height: 70px;
-    top: 45%;
-    animation: ${slideup("55%", "45%")} 2s;
+    top: 35%;
+    animation: ${slideup("45%", "35%")} 2s;
   }
 
   @media (min-width: 600px) {
@@ -53,11 +58,11 @@ export const SubTitle = styled.h2`
   font-weight: 400;
   font-size: 40px;
   position: absolute;
-  top: 65%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: ${slideup2("75%", "65%")} 2s;
+  animation: ${slideup2("65%", "55%")} 2s;
 
   span {
     animation: ${whiteToColor} 10s;
@@ -66,11 +71,32 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 600px) {
     line-height: 40px;
-    top: 70%;
-    animation: ${slideup2("80%", "70%")} 2s;
+    top: 60%;
+    animation: ${slideup2("70%", "60%")} 2s;
   }
 
   @media (min-width: 600px) {
     width: 100%;
   }
+`;
+
+export const SocialMediaLinksContainer = styled.div`
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+`;
+
+export const SocialMediaLink = styled.a`
+  animation: ${slowlyAppears} 2s;
+  font-size: 25px;
+  cursor: pointer;
 `;

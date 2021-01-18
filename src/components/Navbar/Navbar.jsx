@@ -100,6 +100,7 @@ const Navbar = (props) => {
             href="https://github.com/a-rolland"
             rel="noreferrer"
             className="gitHub"
+            isHomepage={location.pathname === "/"}
           >
             <FontAwesomeIcon icon={faGithub} color="white" />
           </SocialMediaLink>
@@ -110,6 +111,7 @@ const Navbar = (props) => {
             href="https://www.linkedin.com/in/-antoine-rolland/"
             rel="noreferrer"
             className="linkedIn"
+            isHomepage={location.pathname === "/"}
           >
             <FontAwesomeIcon icon={faLinkedinIn} color="white" />
           </SocialMediaLink>

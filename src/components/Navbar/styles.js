@@ -153,7 +153,7 @@ export const SocialMediaLink = styled.a`
     }
 
     &.linkedIn {
-      top: 185px;
+      top: 180px;
     }
   }
 `;
