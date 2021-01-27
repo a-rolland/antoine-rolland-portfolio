@@ -42,7 +42,7 @@ const About = (props) => {
             satisfacción de desarrollar y de compartir código con la comunidad.
           </p>
         )}
-        {props.lang === "english" ? (
+        {/* {props.lang === "english" ? (
           <p>
             I have been living in the beautiful city of Barcelona for the last
             four years, and I am currently looking for a new opportunity to grow
@@ -54,7 +54,7 @@ const About = (props) => {
             estoy buscando una nueva oportunidad para crecer como desarrollador
             web.
           </p>
-        )}
+        )} */}
       </Description>
 
       <Title>{props.lang === "english" ? "SKILLS" : "APTITUDES"}</Title>
