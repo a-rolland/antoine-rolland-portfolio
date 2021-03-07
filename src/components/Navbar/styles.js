@@ -107,10 +107,16 @@ export const StyledSpan = styled.span`
 
   &.about {
     color: ${(props) => props.isAbout && "#007eff"};
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &.projects {
     color: ${(props) => props.isProjects && "#007eff"};
+    &:hover {
+      opacity: 0.7;
+    }
   }
 `;
 
@@ -142,6 +148,9 @@ export const SocialMediaLink = styled.a`
   font-size: 25px;
   cursor: pointer;
   margin: 10px 0;
+  &:hover {
+      opacity: 0.5;
+    }
 
   @media (min-width: 767px) {
     margin: 0 10px 10px 10px;

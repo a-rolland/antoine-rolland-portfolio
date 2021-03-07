@@ -99,4 +99,8 @@ export const SocialMediaLink = styled.a`
   animation: ${slowlyAppears} 2s;
   font-size: 25px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
