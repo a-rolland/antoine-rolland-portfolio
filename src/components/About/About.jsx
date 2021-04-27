@@ -18,7 +18,7 @@ const About = (props) => {
     <StyledAbout>
       <Title>{props.lang === "english" ? "ABOUT ME" : "SOBRE MI"}</Title>
 
-      <Picture src={publicPath + "/myPic.jpg"} alt="about me" />
+      <Picture src={publicPath + "/myPic.png"} alt="about me" />
       <Description>
         <p className="picLegend">
           {props.lang === "english"
