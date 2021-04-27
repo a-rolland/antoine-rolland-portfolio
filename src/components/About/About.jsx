@@ -27,19 +27,19 @@ const About = (props) => {
         </p>
         {props.lang === "english" ? (
           <p>
-            I'm a French <em>Full Stack Web Developer</em> Junior with a
-            background in Geographic Information System (GIS). I had my first
-            professional experience as a Web Developer in 2016 and since then I
-            could never forget the thrill and the satisfaction of programming
-            and sharing code with the community.
+            I'm a French Software Engineer with a background in Geographic
+            Information System (GIS). I had my first professional experience as
+            a Web Developer in 2016 and since then I could never forget the
+            thrill and the satisfaction of programming and sharing code with the
+            community.
           </p>
         ) : (
           <p>
-            Soy Antoine, un <em>Desarrollador Web Full Stack</em> Junior
-            francés, con un background en Sistemas de Información Geográfica
-            (SIG). He tenido mi primera experiencia como Desarrollador Web en
-            2016 y desde entonces nunca he podido olvidar el encanto y la
-            satisfacción de desarrollar y de compartir código con la comunidad.
+            Soy Antoine, un Software Engineer francés, con un background en
+            Sistemas de Información Geográfica (SIG). He tenido mi primera
+            experiencia como Desarrollador Web en 2016 y desde entonces nunca he
+            podido olvidar el encanto y la satisfacción de desarrollar y de
+            compartir código con la comunidad.
           </p>
         )}
         {/* {props.lang === "english" ? (
@@ -116,6 +116,12 @@ const About = (props) => {
         </Skill>
         <Skill>
           <div>
+            <img src={publicPath + "/skills/nextjs.png"} alt="NextJs" />
+          </div>
+          <span>Next.js</span>
+        </Skill>
+        <Skill>
+          <div>
             <img src={publicPath + "/skills/mongoDb.png"} alt="MongoDB" />
           </div>
           <span>MongoDB</span>
@@ -143,11 +149,44 @@ const About = (props) => {
           </div>
           <span>Heroku</span>
         </Skill>
+        <Skill>
+          <div>
+            <img src={publicPath + "/skills/netlify.png"} alt="Netlify" />
+          </div>
+          <span>Netlify</span>
+        </Skill>
       </StyledSkills>
 
       <Title>{props.lang === "english" ? "EXPERIENCES" : "EXPERIENCIAS"}</Title>
 
       <StyledExperiences>
+        <Experience>
+          <StructureLogo
+            style={{ backgroundColor: "white", borderRadius: "10px" }}
+          >
+            <img
+              src={publicPath + "/experiences/rokubun.png"}
+              alt="Rokubun logo"
+            />
+          </StructureLogo>
+          <ExperienceDescription>
+            <h2>
+              {props.lang === "english"
+                ? "Software Engineer"
+                : "Software Engineer"}
+            </h2>
+            <h3>Rokubun</h3>
+            <h4>{props.lang === "english" ? "2021 - now" : "2021 - ahora"}</h4>
+            <ul>
+              <li>
+                {props.lang === "english"
+                  ? "Build apps with React.js & Next.js."
+                  : "Desarrollo de páginas web con Reactjs & Next.js."}
+              </li>
+            </ul>
+          </ExperienceDescription>
+        </Experience>
+
         <Experience>
           <StructureLogo>
             <img

@@ -18,9 +18,7 @@ const Homepage = (props) => {
       />
       <Title>Antoine Rolland</Title>
       <SubTitle>
-        {props.lang === "english"
-          ? "Full Stack Web Developer"
-          : "Desarrollador Web Full Stack"}
+        Software Engineer
         <span> Junior </span>
       </SubTitle>
       <SocialMediaLinksContainer>
