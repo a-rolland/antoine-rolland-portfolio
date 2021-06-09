@@ -24,12 +24,12 @@ const Works = (props) => {
         props.lang === "english"
           ? "Built with HTML5 (with Canvas), CSS3 and Vanilla JS."
           : "Hecho con HTML5 (con Canvas), CSS3 y Vanilla JS.",
-      logo: publicPath + "/projects/hackuno/logo.png",
+      logo: publicPath + "/projects/hackuno/Optimized-logo.png",
       pictures: [
-        { url: publicPath + "/projects/hackuno/pictures/1.png" },
-        { url: publicPath + "/projects/hackuno/pictures/2.png" },
-        { url: publicPath + "/projects/hackuno/pictures/3.png" },
-        { url: publicPath + "/projects/hackuno/pictures/4.png" },
+        { url: publicPath + "/projects/hackuno/pictures/Optimized-1.png" },
+        { url: publicPath + "/projects/hackuno/pictures/Optimized-2.png" },
+        { url: publicPath + "/projects/hackuno/pictures/Optimized-3.png" },
+        { url: publicPath + "/projects/hackuno/pictures/Optimized-4.png" },
       ],
     },
     {
@@ -49,12 +49,12 @@ const Works = (props) => {
         props.lang === "english"
           ? "Built with Node.js, Express.js, MongoDB, Mongoose, HTML5, CSS3 and JavaScript."
           : "Hecho con Node.js, Express.js, MongoDB, Mongoose, HTML5, CSS3 y JavaScript.",
-      logo: publicPath + "/projects/nutriapp/logo.png",
+      logo: publicPath + "/projects/nutriapp/Optimized-logo.png",
       pictures: [
-        { url: publicPath + "/projects/nutriapp/pictures/1.png" },
-        { url: publicPath + "/projects/nutriapp/pictures/2.jpg" },
-        { url: publicPath + "/projects/nutriapp/pictures/3.jpg" },
-        { url: publicPath + "/projects/nutriapp/pictures/4.png" },
+        { url: publicPath + "/projects/nutriapp/pictures/Optimized-1.png" },
+        { url: publicPath + "/projects/nutriapp/pictures/Optimized-2.jpg" },
+        { url: publicPath + "/projects/nutriapp/pictures/Optimized-3.jpg" },
+        { url: publicPath + "/projects/nutriapp/pictures/Optimized-4.png" },
       ],
     },
     {
@@ -76,12 +76,12 @@ const Works = (props) => {
         props.lang === "english"
           ? "Built with React.js, Express.js, Node.js, MongoDB, Mongoose, Google Maps API, Facebook Login API, Passport.js, HTML5 and styled-components."
           : "Hecho con React.js, Express.js, Node.js, MongoDB, Mongoose, Google Maps API, Facebook Login API, Passport.js, HTML5 y styled-components.",
-      logo: publicPath + "/projects/supertrips/logo.png",
+      logo: publicPath + "/projects/supertrips/Optimized-logo.png",
       pictures: [
-        { url: publicPath + "/projects/supertrips/pictures/1.png" },
-        { url: publicPath + "/projects/supertrips/pictures/2.png" },
-        { url: publicPath + "/projects/supertrips/pictures/3.png" },
-        { url: publicPath + "/projects/supertrips/pictures/4.png" },
+        { url: publicPath + "/projects/supertrips/pictures/Optimized-1.png" },
+        { url: publicPath + "/projects/supertrips/pictures/Optimized-2.png" },
+        { url: publicPath + "/projects/supertrips/pictures/Optimized-3.png" },
+        { url: publicPath + "/projects/supertrips/pictures/Optimized-4.png" },
       ],
     },
   ];
@@ -90,7 +90,11 @@ const Works = (props) => {
     return (
       <StyledProject key={project.title}>
         <a target="_blank" href={project.link} rel="noreferrer">
-          <Logo src={project.logo} />
+          <Logo
+            taller={project.title === "NutriApp"}
+            src={project.logo}
+            alt="Project logo"
+          />
           <span>
             <FontAwesomeIcon icon={faExternalLinkAlt} color="grey" />
           </span>

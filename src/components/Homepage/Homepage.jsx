@@ -13,7 +13,10 @@ const Homepage = (props) => {
   return (
     <StyledHomepage>
       <Image
-        imgUrl="https://res.cloudinary.com/nutriapp/image/upload/v1609839165/homepage_mcfheg.jpg"
+        imgUrl={{
+          large: "/background/optxx-bg-large.jpg",
+          small: "/background/optxx-bg-small.jpg",
+        }}
         alt="background"
       />
       <Title>Antoine Rolland</Title>
@@ -27,6 +30,7 @@ const Homepage = (props) => {
           href="https://github.com/a-rolland"
           rel="noreferrer"
           className="gitHub"
+          aria-label="Github link"
         >
           <FontAwesomeIcon icon={faGithub} color="white" />
         </SocialMediaLink>
@@ -35,6 +39,7 @@ const Homepage = (props) => {
           href="https://www.linkedin.com/in/-antoine-rolland/"
           rel="noreferrer"
           className="linkedIn"
+          aria-label="Linkedin link"
         >
           <FontAwesomeIcon icon={faLinkedinIn} color="white" />
         </SocialMediaLink>

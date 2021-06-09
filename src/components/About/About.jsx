@@ -63,31 +63,51 @@ const About = (props) => {
       <StyledSkills>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/jsLogo.png"} alt="JavaScript" />
+            <img
+              src={publicPath + "/skills/Optimized-jsLogo.png"}
+              alt="JavaScript"
+              height="100px"
+            />
           </div>
           <span>JavaScript</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/html5.png"} alt="HTML5" />
+            <img
+              src={publicPath + "/skills/Optimized-html5.png"}
+              alt="HTML5"
+              height="100px"
+            />
           </div>
           <span>HTML5</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/css3.png"} alt="CSS3" />
+            <img
+              src={publicPath + "/skills/Optimized-css3.png"}
+              alt="CSS3"
+              height="100px"
+            />
           </div>
           <span>CSS3</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/git.png"} alt="Git" />
+            <img
+              src={publicPath + "/skills/Optimized-git.png"}
+              alt="Git"
+              height="42px"
+            />
           </div>
           <span>Git</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/github.png"} alt="GitHub" />
+            <img
+              src={publicPath + "/skills/Optimized-github.png"}
+              alt="GitHub"
+              height="66px"
+            />
           </div>
           <span>GitHub</span>
         </Skill>
@@ -98,37 +118,61 @@ const About = (props) => {
       <StyledSkills>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/nodeJs.png"} alt="NodeJs" />
+            <img
+              src={publicPath + "/skills/Optimized-nodeJs.png"}
+              alt="NodeJs"
+              height="61px"
+            />
           </div>
           <span>Node.js</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/express.png"} alt="ExpressJs" />
+            <img
+              src={publicPath + "/skills/Optimized-express.png"}
+              alt="ExpressJs"
+              height="34px"
+            />
           </div>
           <span>Express.js</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/reactJs.png"} alt="ReactJs" />
+            <img
+              src={publicPath + "/skills/Optimized-reactJs.png"}
+              alt="ReactJs"
+              height="100px"
+            />
           </div>
           <span>React.js</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/nextjs.png"} alt="NextJs" />
+            <img
+              src={publicPath + "/skills/Optimized-nextjs.png"}
+              alt="NextJs"
+              height="60px"
+            />
           </div>
           <span>Next.js</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/mongoDb.png"} alt="MongoDB" />
+            <img
+              src={publicPath + "/skills/Optimized-mongoDb.png"}
+              alt="MongoDB"
+              height="27px"
+            />
           </div>
           <span>MongoDB</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/python.png"} alt="Python" />
+            <img
+              src={publicPath + "/skills/Optimized-python.png"}
+              alt="Python"
+              height="100px"
+            />
           </div>
           <span>Python</span>
         </Skill>
@@ -139,19 +183,31 @@ const About = (props) => {
       <StyledSkills>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/aws.png"} alt="AWS" />
+            <img
+              src={publicPath + "/skills/Optimized-aws.png"}
+              alt="AWS"
+              height="60px"
+            />
           </div>
           <span>AWS</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/heroku.png"} alt="Heroku" />
+            <img
+              src={publicPath + "/skills/Optimized-heroku.png"}
+              alt="Heroku"
+              height="119px"
+            />
           </div>
           <span>Heroku</span>
         </Skill>
         <Skill>
           <div>
-            <img src={publicPath + "/skills/netlify.png"} alt="Netlify" />
+            <img
+              src={publicPath + "/skills/Optimized-netlify.png"}
+              alt="Netlify"
+              height="100px"
+            />
           </div>
           <span>Netlify</span>
         </Skill>
@@ -165,8 +221,9 @@ const About = (props) => {
             style={{ backgroundColor: "white", borderRadius: "10px" }}
           >
             <img
-              src={publicPath + "/experiences/rokubun.png"}
+              src={publicPath + "/experiences/Optimized-rokubun.png"}
               alt="Rokubun logo"
+              height="125px"
             />
           </StructureLogo>
           <ExperienceDescription>
@@ -190,8 +247,9 @@ const About = (props) => {
         <Experience>
           <StructureLogo>
             <img
-              src={publicPath + "/experiences/ironhack.png"}
+              src={publicPath + "/experiences/Optimized-ironhack.png"}
               alt="Ironhack logo"
+              height="125px"
             />
           </StructureLogo>
           <ExperienceDescription>
@@ -235,8 +293,9 @@ const About = (props) => {
         <Experience>
           <StructureLogo>
             <img
-              src={publicPath + "/experiences/iberia.png"}
+              src={publicPath + "/experiences/Optimized-iberia.png"}
               alt="Iberia logo"
+              height="63px"
             />
           </StructureLogo>
           <ExperienceDescription>
@@ -279,7 +338,11 @@ const About = (props) => {
 
         <Experience>
           <StructureLogo>
-            <img src={publicPath + "/experiences/cirad.png"} alt="Cirad logo" />
+            <img
+              src={publicPath + "/experiences/Optimized-cirad.png"}
+              alt="Cirad logo"
+              height="66px"
+            />
           </StructureLogo>
           <ExperienceDescription>
             <h2>
@@ -324,7 +387,11 @@ const About = (props) => {
 
         <Experience>
           <StructureLogo>
-            <img src={publicPath + "/experiences/sepur.png"} alt="Sepur logo" />
+            <img
+              src={publicPath + "/experiences/Optimized-sepur.png"}
+              alt="Sepur logo"
+              height="55px"
+            />
           </StructureLogo>
           <ExperienceDescription>
             <h2>{props.lang === "english" ? "GIS Analyst" : "Analista GIS"}</h2>

@@ -56,7 +56,7 @@ const Navbar = (props) => {
   return (
     <StyledNavbar isHomepage={location.pathname === "/"}>
       <Link to="/" onClick={closeDropdown}>
-        <Logo src={publicPath + "/logo__white.png"} />
+        <Logo src={publicPath + "/logo__white.png"} alt="Brand logo" />
       </Link>
       <DropdownIcon>
         <FontAwesomeIcon
@@ -101,6 +101,7 @@ const Navbar = (props) => {
             rel="noreferrer"
             className="gitHub"
             isHomepage={location.pathname === "/"}
+            aria-label="Github link"
           >
             <FontAwesomeIcon icon={faGithub} color="white" />
           </SocialMediaLink>
@@ -112,15 +113,24 @@ const Navbar = (props) => {
             rel="noreferrer"
             className="linkedIn"
             isHomepage={location.pathname === "/"}
+            aria-label="Linkedin link"
           >
             <FontAwesomeIcon icon={faLinkedinIn} color="white" />
           </SocialMediaLink>
         </li>
         <li style={{ color: "white" }}>
           {props.lang === "english" ? (
-            <Flag src={publicPath + "/esFlag.png"} onClick={switchLanguage} />
+            <Flag
+              src={publicPath + "/esFlag.png"}
+              onClick={switchLanguage}
+              alt="Click to display in Spanish"
+            />
           ) : (
-            <Flag src={publicPath + "/enFlag.png"} onClick={switchLanguage} />
+            <Flag
+              src={publicPath + "/enFlag.png"}
+              onClick={switchLanguage}
+              alt="Click to display in English"
+            />
           )}
         </li>
       </Dropdown>

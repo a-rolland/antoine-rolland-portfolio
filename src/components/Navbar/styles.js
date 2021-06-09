@@ -32,15 +32,18 @@ export const StyledNavbar = styled.div`
 
 export const Logo = styled.img`
   width: 100px;
+  height: 55px;
   margin: 0 0 0 20px;
 
   @media (max-width: 600px) {
     width: 75px;
+    height: 41px;
     margin: 20px 0 0 20px;
   }
 
   @media (min-width: 600px) and (max-width: 767px) {
     width: 85px;
+    height: 47px;
     margin: 20px 0 0 20px;
   }
 `;
@@ -134,6 +137,7 @@ export const DropdownIcon = styled.span`
 
 export const Flag = styled.img`
   width: 25px;
+  height: 25px;
   animation: ${slowlyAppears} 2s;
   cursor: pointer;
   margin: 10px 0;
@@ -149,8 +153,8 @@ export const SocialMediaLink = styled.a`
   cursor: pointer;
   margin: 10px 0;
   &:hover {
-      opacity: 0.5;
-    }
+    opacity: 0.5;
+  }
 
   @media (min-width: 767px) {
     margin: 0 10px 10px 10px;

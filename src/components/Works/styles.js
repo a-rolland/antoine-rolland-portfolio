@@ -54,14 +54,17 @@ export const Title = styled.h1`
 
 export const Logo = styled.img`
   width: 200px;
+  height: ${(props) => (props.taller ? "62px" : "50px")};
   margin-right: 20px;
 
   @media (min-width: 600px) and (max-width: 992px) {
     width: 300px;
+    height: ${(props) => (props.taller ? "93px" : "75px")};
   }
 
   @media (min-width: 992px) {
     width: 400px;
+    height: ${(props) => (props.taller ? "125px" : "100px")};
   }
 `;
 
