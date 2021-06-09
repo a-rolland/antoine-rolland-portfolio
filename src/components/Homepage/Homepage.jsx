@@ -8,14 +8,15 @@ import {
   SocialMediaLinksContainer,
   SocialMediaLink,
 } from "./styles";
+const publicPath = process.env.PUBLIC_URL;
 
 const Homepage = (props) => {
   return (
     <StyledHomepage>
       <Image
         imgUrl={{
-          large: "/background/optxx-bg-large.jpg",
-          small: "/background/optxx-bg-small.jpg",
+          large: `${publicPath}/background/optxx-bg-large.jpg`,
+          small: `${publicPath}/background/optxx-bg-small.jpg`,
         }}
         alt="background"
       />
