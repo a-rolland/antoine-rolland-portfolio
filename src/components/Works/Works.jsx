@@ -150,7 +150,7 @@ const Works = (props) => {
       <StyledProject key={project.title}>
         {project.maintened
           ? 
-            <a target="_blank" href={project.maintened ? project.link : "#"} rel="noreferrer">
+            <a target="_blank" href={project.maintened ? project.link : "#"} rel="noopener noreferrer">
               <Logo
                 taller={project.title === "NutriApp"}
                 src={project.logo}
