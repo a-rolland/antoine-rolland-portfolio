@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledApp } from "./styles";
 import { useState, lazy, Suspense } from "react";
 
@@ -16,16 +16,18 @@ const App = () => {
   };
 
   return (
-    <StyledApp>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar lang={language} handleToggleLanguage={toggleLanguage} />
-        <Switch>
-          <Route exact path="/" render={() => <Homepage lang={language} />} />
-          <Route exact path="/about" render={() => <About lang={language} />} />
-          <Route exact path="/works" render={() => <Works lang={language} />} />
-        </Switch>
-      </Suspense>
-    </StyledApp>
+    <BrowserRouter>
+      <StyledApp>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar lang={language} handleToggleLanguage={toggleLanguage} />
+          <Routes>
+            <Route path="/" element={<Homepage lang={language} />} />
+            <Route path="/about" element={<About lang={language} />} />
+            <Route path="/works" element={<Works lang={language} />} />
+          </Routes>
+        </Suspense>
+      </StyledApp>
+    </BrowserRouter>
   );
 };
 

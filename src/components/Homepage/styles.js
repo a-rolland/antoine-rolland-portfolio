@@ -26,15 +26,15 @@ export const StyledHomepage = styled.div`
 
 export const Image = styled.div`
   @media (max-width: 600px) {
-    background: url(${(props) => props.imgUrl.small}) repeat center center fixed;
+    background: url(${(props) => props.$imgUrl.small}) repeat center center fixed;
     background-size: cover;
   }
 
   @media (min-width: 600px) {
-    background: url(${(props) => props.imgUrl.large}) repeat center center fixed;
+    background: url(${(props) => props.$imgUrl.large}) repeat center center fixed;
     background-size: cover;
   }
-  /* background: url(${(props) => props.imgUrl}) repeat center center fixed; */
+  /* background: url(${(props) => props.$imgUrl}) repeat center center fixed; */
   /* background-size: cover; */
   width: 100vw;
   height: 100vh;

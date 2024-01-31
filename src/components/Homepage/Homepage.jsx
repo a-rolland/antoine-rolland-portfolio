@@ -15,7 +15,7 @@ const Homepage = () => {
   return (
     <StyledHomepage>
       <Image
-        imgUrl={{
+        $imgUrl={{
           large: `${publicPath}/background/bg-large.jpg`,
           small: `${publicPath}/background/bg-small.jpg`,
         }}

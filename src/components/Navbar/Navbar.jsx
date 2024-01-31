@@ -54,7 +54,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <StyledNavbar isHomepage={location.pathname === "/"}>
+    <StyledNavbar $isHomepage={location.pathname === "/"}>
       <Link to="/" onClick={closeDropdown}>
         <Logo src={publicPath + "/logo__white.png"} alt="Brand logo" />
       </Link>
@@ -68,12 +68,12 @@ const Navbar = (props) => {
           onClick={toggleDropdown}
         />
       </DropdownIcon>
-      <Dropdown showDropdown={showDropdown ? "flex" : "none"}>
+      <Dropdown $showDropdown={showDropdown ? "flex" : "none"}>
         <li>
           <Link to="/about" onClick={closeDropdown}>
             <StyledSpan
               className="about"
-              isAbout={location.pathname === "/about"}
+              $isAbout={location.pathname === "/about"}
             >
               {props.lang === "english" ? "ABOUT" : "SOBRE MI"}
             </StyledSpan>
@@ -88,7 +88,7 @@ const Navbar = (props) => {
           <Link to="/works" onClick={closeDropdown}>
             <StyledSpan
               className="projects"
-              isProjects={location.pathname === "/works"}
+              $isProjects={location.pathname === "/works"}
             >
               {props.lang === "english" ? "PROJECTS" : "PROYECTOS"}
             </StyledSpan>
@@ -100,7 +100,7 @@ const Navbar = (props) => {
             href="https://github.com/a-rolland"
             rel="noreferrer"
             className="gitHub"
-            isHomepage={location.pathname === "/"}
+            // $isHomepage={location.pathname === "/"}
             aria-label="Github link"
           >
             <FontAwesomeIcon icon={faGithub} color="white" />
@@ -112,7 +112,7 @@ const Navbar = (props) => {
             href="https://www.linkedin.com/in/-antoine-rolland/"
             rel="noreferrer"
             className="linkedIn"
-            isHomepage={location.pathname === "/"}
+            // $isHomepage={location.pathname === "/"}
             aria-label="Linkedin link"
           >
             <FontAwesomeIcon icon={faLinkedinIn} color="white" />

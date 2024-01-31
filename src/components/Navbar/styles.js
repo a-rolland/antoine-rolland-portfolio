@@ -15,7 +15,7 @@ export const StyledNavbar = styled.div`
   padding-bottom: 10px;
   width: 100%;
   z-index: 5;
-  background-color: ${(props) => (props.isHomepage ? "none" : "#181818")};
+  background-color: ${(props) => (props.$isHomepage ? "none" : "#181818")};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ export const Logo = styled.img`
 
 export const Dropdown = styled.ul`
   @media (max-width: 767px) {
-    display: ${(props) => props.showDropdown};
+    display: ${(props) => props.$showDropdown};
     flex-direction: column;
     list-style-type: none;
     top: 83px;
@@ -109,14 +109,14 @@ export const StyledSpan = styled.span`
   }
 
   &.about {
-    color: ${(props) => props.isAbout && "#007eff"};
+    color: ${(props) => props.$isAbout && "#007eff"};
     &:hover {
       opacity: 0.7;
     }
   }
 
   &.projects {
-    color: ${(props) => props.isProjects && "#007eff"};
+    color: ${(props) => props.$isProjects && "#007eff"};
     &:hover {
       opacity: 0.7;
     }
