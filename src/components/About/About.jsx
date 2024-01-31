@@ -27,7 +27,7 @@ const About = (props) => {
         </p>
         {props.lang === "english" ? (
           <p>
-            I'm a French Software Engineer with a background in Geographic
+            I'm a Software Engineer with a background in Geographic
             Information System (GIS). I had my first professional experience as
             a Web Developer in 2016 and since then I could never forget the
             thrill and the satisfaction of programming and sharing code with the
@@ -35,7 +35,7 @@ const About = (props) => {
           </p>
         ) : (
           <p>
-            Soy Antoine, un Software Engineer francés, con un background en
+            Soy Antoine, un Software Engineer, con un background en
             Sistemas de Información Geográfica (SIG). He tenido mi primera
             experiencia como Desarrollador Web en 2016 y desde entonces nunca he
             podido olvidar el encanto y la satisfacción de desarrollar y de
@@ -46,7 +46,7 @@ const About = (props) => {
 
       <Title>{props.lang === "english" ? "SKILLS" : "APTITUDES"}</Title>
 
-      <SubTitle>2+ {props.lang === "english" ? "years" : "años"}</SubTitle>
+      <SubTitle>3+ {props.lang === "english" ? "years" : "años"}</SubTitle>
       <StyledSkills>
         <Skill>
           <div>
@@ -105,14 +105,9 @@ const About = (props) => {
           <span>GitHub</span>
         </Skill>
       </StyledSkills>
-      {/* <SubTitle>1 - 2 {props.lang === "english" ? "years" : "años"}</SubTitle>
+      <SubTitle>1 - 3 {props.lang === "english" ? "years" : "años"}</SubTitle>
       <StyledSkills>
-      </StyledSkills> */}
-      <SubTitle>
-        {props.lang === "english" ? "6 months - 1 year" : "6 meses - 1 año"}
-      </SubTitle>
-      <StyledSkills>
-      <Skill>
+        <Skill>
           <div>
             <img
               src={publicPath + "/skills/typeScript.png"}
@@ -121,6 +116,16 @@ const About = (props) => {
             />
           </div>
           <span>TypeScript</span>
+        </Skill>
+        <Skill>
+          <div>
+            <img
+              src={publicPath + "/skills/mongoDb.png"}
+              alt="MongoDB"
+              height="27px"
+            />
+          </div>
+          <span>MongoDB</span>
         </Skill>
         <Skill>
           <div>
@@ -142,6 +147,11 @@ const About = (props) => {
           </div>
           <span>Express.js</span>
         </Skill>
+      </StyledSkills>
+      <SubTitle>
+        {props.lang === "english" ? "6 months - 1 year" : "6 meses - 1 año"}
+      </SubTitle>
+      <StyledSkills>
         <Skill>
           <div>
             <img
@@ -151,16 +161,6 @@ const About = (props) => {
             />
           </div>
           <span>Next.js</span>
-        </Skill>
-        <Skill>
-          <div>
-            <img
-              src={publicPath + "/skills/mongoDb.png"}
-              alt="MongoDB"
-              height="27px"
-            />
-          </div>
-          <span>MongoDB</span>
         </Skill>
         <Skill>
           <div>
@@ -235,22 +235,32 @@ const About = (props) => {
                 : "Front End Developer"}
             </h2>
             <h3>Sopra Steria</h3>
-            <h4>{props.lang === "english" ? "2022" : "2022"}</h4>
+            <h4>{props.lang === "english" ? "2022 - now" : "2022 - ahora"}</h4>
             <ul>
               <li>
                 {props.lang === "english"
-                  ? "Built web apps for french real estate company Nexity."
-                  : "Desarrollo de aplicaciones web para la empresa francesa de desarrollo inmobiliario Nexity."}
+                  ? "Redesigned internal web applications of a french railway company."
+                  : "Revisión y rediseño de dos aplicaciones web internas de una empresa de ferrocarriles francesa."}
               </li>
               <li>
                 {props.lang === "english"
-                  ? "Built web apps for french railway company SNCF."
-                  : "Desarrollo de aplicaciones web para la empresa francesa ferrovial estatal SNCF."}
+                  ? "Angular.js to React and Vue.js to React."
+                  : "Angular.js hacia React y Vue.js hacia React."}
               </li>
               <li>
                 {props.lang === "english"
-                  ? "Use of React.js with TypeScript."
-                  : "Uso de React.js con TypeScript."}
+                  ? "Created a new application from scratch with React and TypeScript."
+                  : "Creación de una nueva aplicación con React y TypeScript."}
+              </li>
+              <li>
+                {props.lang === "english"
+                  ? "Maintened and optimized these applications."
+                  : "Mantenimiento y optimización de estas aplicaciones."}
+              </li>
+              <li>
+                {props.lang === "english"
+                  ? "Maintened and optimized an internal web application of a french real estate leader company ."
+                  : "Mantenimiento y optimización de una aplicación web interne de un cliente francés líder en el sector inmobiliario."}
               </li>
             </ul>
           </ExperienceDescription>

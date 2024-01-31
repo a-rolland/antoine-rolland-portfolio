@@ -21,7 +21,7 @@ const Homepage = () => {
         alt="background"
       />
       <Title>Antoine Rolland</Title>
-      <SubTitle>Front End Developer Junior/Mid</SubTitle>
+      <SubTitle>Front End Developer</SubTitle>
       <SocialMediaLinksContainer>
         <SocialMediaLink
           target="_blank"
