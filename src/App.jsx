@@ -1,3 +1,4 @@
+import React from 'react'
 import { Switch, Route } from "react-router-dom";
 import { StyledApp } from "./styles";
 import { useState, lazy, Suspense } from "react";

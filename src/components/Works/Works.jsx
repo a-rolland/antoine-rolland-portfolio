@@ -1,3 +1,4 @@
+import React from 'react'
 import Gallery from "../Gallery/Gallery";
 import { StyledWorks, Title, Logo, Paragraph, StyledProject } from "./styles";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
